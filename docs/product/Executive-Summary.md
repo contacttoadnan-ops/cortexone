@@ -12,6 +12,7 @@
 | Version | Date | Author | Notes |
 |---|---|---|---|
 | 1.0 | 2026-06-28 | Documentation Team | Initial release from codebase reverse-engineering |
+| 1.1 | 2026-06-28 | Audit Team | Corrected market figures labeling, integration count, competitor pricing, billing discount claim |
 
 ---
 
@@ -71,7 +72,7 @@ CortexOne closes every gap in one platform:
 
 ## 4. Market Opportunity
 
-The global employee monitoring and productivity software market exceeded **$5.9 billion in 2024** and is growing at approximately **12% CAGR**, driven by permanent shift to hybrid and remote work.
+The global employee monitoring and productivity software market exceeded **$5.9 billion in 2024** and is growing at approximately **12% CAGR**, driven by permanent shift to hybrid and remote work. _[External market estimates — source and date required before use in investor materials.]_
 
 Primary competitors address sub-segments:
 
@@ -85,9 +86,9 @@ Primary competitors address sub-segments:
 
 **CortexOne's market positioning:** The only platform to combine IT device monitoring + productivity intelligence + full HR workflows (leave, scheduling, payroll) in a single product at SMB-accessible pricing.
 
-**Total Addressable Market (estimate):** 50 million Windows-based knowledge workers at companies of 20–500 employees in English-speaking markets.
+**Total Addressable Market (estimate):** 50 million Windows-based knowledge workers at companies of 20–500 employees in English-speaking markets. _[Estimate — verify against current market research.]_
 
-**Serviceable Addressable Market (estimate):** 10 million seats in BPO, IT services, and professional services verticals — at $5/seat/month average, this represents $600M ARR potential.
+**Serviceable Addressable Market (estimate):** 10 million seats in BPO, IT services, and professional services verticals — at $5/seat/month average, this represents $600M ARR potential. _[Estimate — verify against current market research.]_
 
 ---
 
@@ -105,14 +106,14 @@ CortexOne wins on **breadth** and **integration depth**:
 - Only monitoring platform with built-in **leave management, shift scheduling, and payroll export**
 - Only platform with **RMM-compatible silent deployment** (Defender exclusions automated, compatible with NinjaOne, Datto, N-able, ConnectWise, Atera)
 - **Phase 3 advanced monitoring** (session recording, webcam snapshots, GPS/WiFi location) available on opt-in — matched only by Teramind
-- **11 webhook event types** across 10 integrations (QuickBooks, Xero, Jira, Asana, Trello, Slack, Teams, Zapier, Make) — more than any competitor
+- **11 webhook event types** across 9 verified integrations (QuickBooks, Xero, Jira, Asana, Trello, Slack, Teams, Zapier, Make)
 
 **Pricing advantage:**
 - Starter: $3/seat/month
 - Pro: $5/seat/month
 - Enterprise: $8/seat/month
 
-Compared to buying ActivTrak ($10) + Hubstaff ($7) + a leave management tool ($3) = **$20/seat/month**, CortexOne delivers the combined value at $8/seat/month maximum.
+Compared to buying separate tools (employee monitoring + time tracking + leave management), CortexOne delivers the combined value at $8/seat/month maximum. _[Competitor pricing changes frequently — verify current published prices before use in sales materials.]_
 
 ---
 
@@ -150,6 +151,7 @@ Compared to buying ActivTrak ($10) + Hubstaff ($7) + a leave management tool ($3
 
 **Immediate pre-launch requirements:**
 - Cloudflare Turnstile CAPTCHA is explicitly disabled (`TURNSTILE_SECRET=DISABLED`) — must be enabled before public traffic
+- Stripe keys are test-mode only (`sk_test_...`) — live Stripe keys required before any customer billing can be processed
 - MFA enforcement UI is incomplete (schema present, flow not verified)
 - Infrastructure requires upgrade from WAMP/single-server to production-grade hosting
 

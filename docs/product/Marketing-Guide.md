@@ -12,6 +12,7 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from verified product features |
+| 1.1 | 2026-06-28 | Removed specific competitor prices (unverified); labeled ROI example as illustrative; removed white-label claim; removed annual discount figure |
 
 ---
 
@@ -40,7 +41,7 @@
 | Clients managed | 5–50 organisations, each 10–200 seats |
 | Tooling | NinjaOne, Datto, N-able, ConnectWise, Atera (all RMM-compatible) |
 | Pain state | Clients asking for productivity visibility; current tools don't provide it |
-| Opportunity | White-label or reseller agreement for CortexOne |
+| Opportunity | Channel partnership — refer clients to CortexOne at volume pricing |
 
 ---
 
@@ -206,16 +207,15 @@ No competitor in the monitoring space includes leave management, shift schedulin
 
 ### Advantage 2: Cost
 
-A typical operations-heavy company of 100 employees pays:
+A typical operations-heavy company of 100 employees pays for multiple separate tools (employee monitoring + time tracking + leave management). CortexOne Enterprise ($8/seat) replaces all three. _[Verify competitor pricing against current published rates before use in sales conversations — prices change frequently.]_
 
 | Tool | Monthly Cost |
 |---|---|
-| ActivTrak Business | $1,000/mo ($10/seat) |
-| Hubstaff Team | $700/mo ($7/seat) |
-| Leave management (Personio, etc.) | $300/mo ($3/seat) |
-| **Total** | **$2,000/mo** |
-| **CortexOne Enterprise** | **$800/mo ($8/seat)** |
-| **Savings** | **$1,200/mo ($14,400/yr)** |
+| Employee monitoring tool (e.g. ActivTrak) | Verify current pricing |
+| Time tracking tool (e.g. Hubstaff) | Verify current pricing |
+| Leave management tool | Verify current pricing |
+| **Estimated Total (3 tools)** | **Typically $15–20/seat/mo** |
+| **CortexOne Enterprise** | **$8/seat/mo** |
 
 ### Advantage 3: Deployment Speed
 
@@ -366,7 +366,7 @@ A: CortexOne sends events to Slack, Teams, Zapier, and Make via webhooks. You ca
 A: No. The agent on employee machines phones home to our cloud servers. No server, no VPN, no on-premises installation.
 
 **Q: How is it priced?**  
-A: Per seat per month. Starter ($3), Pro ($5), Enterprise ($8). Annual billing available at 2 months free.
+A: Per seat per month. Starter ($3), Pro ($5), Enterprise ($8). Annual billing available — contact sales for annual pricing.
 
 **Q: What's included in the free trial?**  
 A: Full platform access including Pro features for 14 days. No credit card required. Deploy as many devices as you need during the trial.
@@ -400,4 +400,4 @@ That was probably a surveillance tool, not a productivity platform. CortexOne is
 All data is isolated per organisation, encrypted in transit, and never shared with other customers. For enterprise customers with specific data residency requirements, contact us to discuss options.
 
 **"What's the ROI?"**  
-A team of 50 that improves average productivity by 10% effectively adds the equivalent of 5 additional full-time employees without hiring. At an average salary of $50K, that's $250K/year of recovered output — for $3,000/year in CortexOne fees.
+A team of 50 that improves average productivity by 10% effectively adds the equivalent of 5 additional full-time employees without hiring. _[Illustrative example — actual impact depends on team size, salary, and productivity baseline. Do not present as a guaranteed or verified figure.]_

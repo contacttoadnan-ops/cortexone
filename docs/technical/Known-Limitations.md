@@ -12,12 +12,15 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from repository analysis |
+| 1.1 | 2026-06-28 | Reclassified Windows-only agent from Critical to High (market scope, not security risk); elevated Stripe test keys to Critical launch blocker; added scope caveat on absence-of-evidence methodology |
 
 ---
 
 ## How to Read This Document
 
-Every limitation listed here is supported by evidence from the repository. No limitations are inferred or invented. Where code is cited, the specific file or configuration key is provided.
+Every limitation listed here is supported by evidence from the repository. Where code is cited, the specific file or configuration key is provided.
+
+**Scope note:** This audit covers the repository only. Some limitations (e.g., backup configuration, test suites) are stated as "not found in repository" — this does not rule out configurations managed outside the repository (server-level cron, external CI pipelines, separate test repos). Verify with the operations team before treating absence-of-evidence as confirmed absence.
 
 **Severity classifications:**
 - 🔴 **Critical** — Blocks production readiness or creates material security risk
@@ -141,7 +144,7 @@ Every limitation listed here is supported by evidence from the repository. No li
 
 ## 3. Platform Limitations
 
-### 🔴 Windows-Only Agent
+### 🟠 Windows-Only Agent
 
 **Evidence:** Agent `TargetFramework=net8.0-windows10.0.19041.0`. WinRT API usage (`Windows.Media.Capture`, `Windows.Devices.Geolocation`). `win-x64` publish target.  
 **Impact:** ~40% of knowledge workers use Macs. Linux-based engineering teams are excluded entirely. Any organisation with mixed Windows/Mac fleet cannot monitor all devices.  
@@ -342,11 +345,11 @@ Every limitation listed here is supported by evidence from the repository. No li
 | 1 | CAPTCHA disabled | 🔴 Critical | Low |
 | 2 | MFA not enforced | 🟠 High | Medium |
 | 3 | Single-server deployment | 🔴 Critical | High |
-| 4 | Windows-only agent | 🔴 Critical | Very High |
+| 4 | Windows-only agent | 🟠 High (market scope) | Very High |
 | 5 | No automated tests | 🟠 High | High |
 | 6 | No automated backups | 🟠 High | Low |
 | 7 | Local file storage no quota | 🟠 High | Medium |
-| 8 | Stripe test keys only | 🟠 High | Low |
+| 8 | Stripe test keys only | 🔴 Critical (launch blocker) | Low |
 | 9 | Heartbeat partition manual | 🟡 Medium | Low |
 | 10 | Session files local | 🟡 Medium | Medium |
 | 11 | Report generation synchronous | 🟡 Medium | High |

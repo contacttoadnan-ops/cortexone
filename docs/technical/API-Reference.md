@@ -13,6 +13,28 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from source code reverse-engineering |
+| 1.1 | 2026-06-28 | Added Coverage Notice listing undocumented resource files; flagged agent-update PUBLIC_ROUTES discrepancy |
+
+---
+
+## Coverage Notice
+
+This reference documents all API endpoints that could be verified from source code analysis. The following resource files exist in `api/v1/` but their full endpoint specifications are **not yet documented** in this reference. An engineer should read each file and add entries before this document is used as a complete integration reference:
+
+| Resource File | Documented Here | Action Required |
+|---|---|---|
+| `departments.php` | No | Document GET/POST/PUT/DELETE /departments |
+| `insights.php` | No | Document GET /insights endpoints |
+| `projects.php` | No | Document GET/POST/PUT/DELETE /projects |
+| `config.php` | No | Document GET /config, PUT /config |
+| `identity.php` | No | Document GET /identity endpoints |
+| `portal.php` | Partial | Document employee portal endpoints |
+| `keystrokes.php` | No | Document GET /keystrokes |
+| `screenshots.php` | No | Document GET /screenshots endpoints |
+| `network.php` | No | Document GET /network endpoints |
+| `live.php` / `stream.php` | No | Document live stream endpoints |
+
+> **Note on `agent-update`:** `GET /agent-update/check` is listed as having "No auth required" in this document. Verify that `agent-update` is in the `PUBLIC_ROUTES` constant in `api/index.php` — it is NOT listed in Architecture.md's `PUBLIC_ROUTES` array.
 
 ---
 

@@ -12,6 +12,7 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from codebase reverse-engineering |
+| 1.1 | 2026-06-28 | Added unconfirmed library gaps (PDF, Excel, charting); clarified gd/imagick uncertainty |
 
 ---
 
@@ -89,6 +90,9 @@
 | openssl_* functions | PHP built-in | RSA signing/verification |
 | ZipArchive | PHP built-in | Agent package ZIP generation |
 | curl / file_get_contents | PHP built-in | OAuth token exchange, webhook delivery |
+| **PDF generation library** | **Not confirmed from repository** | **Required by `reports.php` for PDF export — investigate before environment setup** |
+| **Excel generation library** | **Not confirmed from repository** | **Required by `reports.php` for XLSX export — investigate before environment setup** |
+| **Charting library** | **Not confirmed from repository** | **Used in dashboard templates — inspect `shell.php` script includes to identify** |
 
 ---
 
@@ -173,7 +177,7 @@
 | `openssl` | JWT signing, HTTPS |
 | `curl` | OAuth token exchange, webhook delivery |
 | `zip` | Agent package ZIP generation |
-| `gd` or `imagick` | Image processing (screenshots) |
+| `gd` or `imagick` | Image processing (screenshots) — exact extension required not confirmed from repository |
 | `json` | API request/response |
 | `mbstring` | Multi-byte string handling |
 | `fileinfo` | MIME type detection |

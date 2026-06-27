@@ -12,6 +12,7 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from codebase reverse-engineering |
+| 1.1 | 2026-06-28 | Fixed .env.example reference (file doesn't exist); added required directory creation steps; corrected integration count |
 
 ---
 
@@ -51,7 +52,7 @@ ProductivitySuite/                  ← Web application root
 │       ├── scheduling.php          ├─ Shift scheduling
 │       ├── payroll.php             ├─ Payroll + overtime
 │       ├── timesheets.php          ├─ Timesheet module
-│       ├── integrations.php        ├─ 10 platform integrations
+│       ├── integrations.php        ├─ 9 verified platform integrations
 │       ├── webhooks.php            ├─ Webhook config + logs
 │       ├── api-keys.php            ├─ API key management
 │       ├── recordings.php          ├─ Session recordings (Phase 3)
@@ -152,8 +153,9 @@ ProductivitySuite/                  ← Web application root
 # 1. Clone repository to WAMP www directory
 git clone <repo-url> C:/wamp64/www/ProductivitySuite
 
-# 2. Copy .env template
-cp .env.example .env
+# 2. Create .env from the actual .env file (no .env.example template exists in repo)
+cp .env .env.backup        # keep a backup of production values
+# Then edit .env with your local development credentials
 
 # 3. Edit .env with real credentials
 # Required: DB_*, MAIL_*, AGENT_SECRET, CRON_SECRET
@@ -174,11 +176,13 @@ mysql -u root -p productivity_suite < database/schema.sql
 mysql -u root -p productivity_suite < database/migrations/sso_oauth.sql
 # ... run all migration files in numerical order
 
-# 7. Set directory permissions (Windows WAMP — ensure Apache can write)
-# Ensure these directories are writable by Apache:
-# - /sessions/
-# - /storage/
-# - /reports/generated/
+# 7. Create required directories (these must exist — they are not created by the repo)
+mkdir sessions
+mkdir -p storage/screenshots storage/recordings storage/webcam
+mkdir -p reports/generated
+mkdir -p downloads
+# Place ProductivityAgent.exe and agent-meta.json in downloads/ for the agent download endpoint to work
+# Ensure these directories are writable by Apache (WAMP: right-click → properties → security)
 
 # 8. Configure Apache vhost (WAMP vhosts.conf)
 # DocumentRoot: C:/wamp64/www/ProductivitySuite

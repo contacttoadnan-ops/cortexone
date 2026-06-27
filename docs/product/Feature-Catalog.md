@@ -12,6 +12,7 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from codebase reverse-engineering |
+| 1.1 | 2026-06-28 | Corrected OAuth terminology (PKCE → state-based CSRF) |
 
 ---
 
@@ -559,7 +560,7 @@ All features in this module are disabled by default. Require explicit admin acti
 
 **Status:** Implemented (credentials required)  
 **Business Value:** Frictionless registration and login for Google Workspace organisations. No separate password to manage.  
-**Implementation:** PKCE-style flow via `oauth.php`. Scopes: `openid email profile`. Userinfo: `googleapis.com/oauth2/v3/userinfo`. CSRF state in `oauth_states` table (10-min TTL). On new user: redirect to `sso-complete` page. On existing user: create PHP session.  
+**Implementation:** OAuth 2.0 with state-based CSRF protection via `oauth.php`. Scopes: `openid email profile`. Userinfo: `googleapis.com/oauth2/v3/userinfo`. CSRF state stored in `oauth_states` table (64-char random token, 10-min TTL, single-use). On new user: redirect to `sso-complete` page. On existing user: create PHP session.  
 **Related Tables:** `oauth_states`, `sso_configs`, `users` (auth_provider, auth_provider_id)  
 **Limitations:** `GOOGLE_CLIENT_ID` is empty in `.env` — buttons show "Setup Required" badge. Requires Google Cloud Console setup.
 

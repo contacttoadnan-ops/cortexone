@@ -12,15 +12,19 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from codebase reverse-engineering |
+| 1.1 | 2026-06-28 | Fixed "two-tier" terminology; flagged HMAC auth inconsistency for verification; corrected OAuth PKCE terminology; flagged ScreenshotEnabled default for verification |
 
 ---
 
 ## 1. Overall Architecture
 
-CortexOne is a **two-tier SaaS platform** comprising:
+CortexOne follows a **three-tier architecture** with two deployment components:
 
-1. **Server tier** — PHP 8.3 web application + MySQL 8.4 on a WAMP/Apache stack
-2. **Client tier** — .NET 8 Windows Service agent running on employee endpoints
+1. **Presentation tier** — Browser (Org Admin dashboard) and Windows Agent (employee endpoint)
+2. **Application tier** — PHP 8.3 web application on Apache 2.4
+3. **Data tier** — MySQL 8.4 database + local file storage
+
+The two deployment components are the **server** (app + DB, co-located on WAMP) and the **client** (.NET 8 Windows Service agent on employee machines).
 
 All communication is HTTPS. The agent authenticates with HMAC-SHA256 device tokens. Dashboard users authenticate via PHP sessions + JWT RS256.
 
@@ -171,6 +175,9 @@ $allowedPages = [
     ├── Reads URI segments → maps to resource file
     ├── PUBLIC_ROUTES = ['auth', 'register', 'agent-download', 'oauth']
     │      (no auth required for these prefixes)
+    │      NOTE: 'agent-update' is NOT in PUBLIC_ROUTES per this list but
+    │      GET /agent-update/check is documented as public in API-Reference.
+    │      Verify against actual api/index.php PUBLIC_ROUTES constant.
     ├── Rate limiting check (api_rate_limits table)
     ├── Auth middleware for protected routes
     └── Routes:
@@ -343,7 +350,7 @@ Stored in `C:\Program Files\ProductivityAgent\appsettings.json`:
     "AppUsageIntervalSeconds": 300,
     "ScreenshotIntervalSeconds": 900,
     "ScreenshotQuality": 70,
-    "ScreenshotEnabled": true,
+    "ScreenshotEnabled": true,    ← Verify default against actual appsettings.json — Feature-Catalog states opt-in/disabled by default
     "RecordingEnabled": false,
     "WebcamEnabled": false,
     "LocationEnabled": false,
@@ -486,16 +493,18 @@ Headers: `Content-Type, Authorization`
 ```
 1. POST /api/v1/agent/register { device_uuid, hostname, ...hardware }
    Header: X-Org-Id: {org_id}, X-Registration-Secret: {AGENT_SECRET}
-2. Server: HMAC-SHA256(device_uuid + timestamp, AGENT_SECRET) → device_token
+2. Server generates device_token — exact HMAC inputs must be verified from agent.php
 3. INSERT devices row → return { device_id, device_token }
 4. Agent stores device_id + device_token in appsettings.json
 
 Subsequent requests:
    Header: X-Device-Id: {device_id}, X-Device-Token: {token}
-   Server: HMAC::verify(device_id + device_uuid, AGENT_SECRET) → validates token
+   Server: validates token via HMAC — verify exact construction from AuthMiddleware.php
 ```
 
-### OAuth 2.0 / SSO Flow
+> **TODO (ISSUE-003):** Verify the exact HMAC inputs for token generation and verification against `api/v1/agent.php` and `api/helpers/AuthMiddleware.php`. The generation and verification descriptions must use identical inputs.
+
+### OAuth 2.0 / SSO Flow (Standard State-Based CSRF Protection)
 ```
 1. User clicks "Continue with Google/Microsoft"
 2. GET /api/v1/oauth/redirect/{provider}?intent=login

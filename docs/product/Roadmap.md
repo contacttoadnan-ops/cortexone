@@ -12,6 +12,7 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from repository analysis |
+| 1.1 | 2026-06-28 | Added Stripe live keys as Immediate pre-launch blocker; corrected Stripe priority from Informational to Critical |
 
 ---
 
@@ -231,7 +232,7 @@ All items below have supporting evidence from the repository.
 | No OpenAPI spec | No API documentation contract | Medium — integration developer friction | Medium |
 | SQLite unencrypted | agent offline.db in plaintext | Medium — local admin can read cached telemetry | Medium |
 | No cleanup jobs | oauth_states, api_rate_limits, generated_reports accumulate | Low — table bloat over time | Low |
-| Stripe test keys | `sk_test_YOUR_SECRET_KEY_HERE` in .env | Informational — must replace before billing goes live | Informational |
+| Stripe test keys | `sk_test_YOUR_SECRET_KEY_HERE` in .env | **Critical launch blocker** — zero revenue can be collected until replaced with live Stripe keys | Immediate |
 
 ---
 
@@ -290,7 +291,8 @@ All items below are recommendations (💡) — none found in repository.
 ### Immediate (Pre-Launch Blockers)
 | Item | Type | Effort | Impact |
 |---|---|---|---|
-| Enable Cloudflare Turnstile | Technical debt | Low | Critical security |
+| Enable Cloudflare Turnstile | Technical debt | Low | Critical security — open bot registration until fixed |
+| Replace Stripe test keys with live keys | Technical debt | Low | Revenue blocker — no billing possible until fixed |
 | Complete billing UI | In Progress | Medium | Revenue enablement |
 | Complete MFA flow | In Progress | Medium | Enterprise requirement |
 | Production hosting | Technical debt | High | Reliability / SLA |

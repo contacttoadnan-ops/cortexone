@@ -12,6 +12,7 @@
 | Version | Date | Notes |
 |---|---|---|
 | 1.0 | 2026-06-28 | Generated from schema.sql + migrations + DESCRIBE queries |
+| 1.1 | 2026-06-28 | Added caveat on table count; added §2.1 listing tables referenced but not individually documented |
 
 ---
 
@@ -24,7 +25,7 @@
 | Storage engine | InnoDB (all tables) |
 | Character set | utf8mb4 |
 | Collation | utf8mb4_unicode_ci |
-| Total tables | 46 |
+| Total tables | 46 (verified from schema.sql; ERD section may list additional tables from migrations — reconcile against `SHOW TABLES` if count differs) |
 | Partitioned tables | 1 (`heartbeats`, RANGE by month) |
 | Root entity | `organizations` |
 | Multi-tenancy | `org_id` FK on all customer-scoped tables |
@@ -842,6 +843,25 @@ Storage: `/storage/webcam/{device_id}/{date}/{filename}.jpg`
 | `updated_at` | DATETIME | |
 
 **PK:** `(identifier, endpoint)`
+
+---
+
+## 2.1 Tables Referenced But Not Individually Documented
+
+The following tables appear in Feature-Catalog.md or Roadmap.md but do not have dedicated entries in the Table-by-Table Analysis above. They should be verified against `SHOW TABLES` and documented if present:
+
+| Table | Referenced In | Action Required |
+|---|---|---|
+| `subscription_events` | Feature-Catalog.md §10.1, Roadmap.md | Verify existence; add analysis entry |
+| `device_assignments` | ERD Section 1 | Verify existence; add analysis entry |
+| `attendance_records` | ERD Section 1, Feature-Catalog §1.4 | Verify existence; add analysis entry |
+| `project_devices` | ERD Section 1 | Verify existence; add analysis entry |
+| `sso_configs` | ERD Section 1, Feature-Catalog §12 | Verify existence; add analysis entry |
+| `integration_configs` | ERD Section 1, Feature-Catalog §8 | Verify existence; add analysis entry |
+| `export_logs` | ERD Section 1 | Verify existence; add analysis entry |
+| `agent_update_history` | Auto-update flow | Verify existence; add analysis entry |
+
+> Run `SHOW TABLES IN productivity_suite;` to confirm exact table list and resolve any ERD vs. schema.sql discrepancies.
 
 ---
 
