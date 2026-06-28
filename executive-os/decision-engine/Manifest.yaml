@@ -1,0 +1,43 @@
+engine:
+
+  name: Decision Engine
+
+  id: decision-engine
+
+  description: Produces executive decisions using identity, knowledge, context, memory, and governance.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+depends_on:
+
+  - identity-engine
+
+  - knowledge-engine
+
+  - context-engine
+
+  - memory-engine
+
+provides:
+
+  - Executive Decision
+
+  - Recommendation
+
+  - Confidence Score
+
+  - Risk Assessment
+
+  - Escalation Decision
+
+next_engine:
+
+  governance-engine

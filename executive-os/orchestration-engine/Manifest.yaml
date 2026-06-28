@@ -1,0 +1,41 @@
+engine:
+
+  name: Orchestration Engine
+
+  id: orchestration-engine
+
+  description: Coordinates execution across the Executive Operating System.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+depends_on:
+
+  - identity-engine
+  - knowledge-engine
+  - context-engine
+  - memory-engine
+  - decision-engine
+  - governance-engine
+  - collaboration-engine
+  - reporting-engine
+  - learning-engine
+
+provides:
+
+  - Workflow Coordination
+  - Execution State
+  - Task Routing
+  - Dependency Management
+  - Execution Monitoring
+
+next_engine:
+
+  none

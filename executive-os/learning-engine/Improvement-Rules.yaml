@@ -1,0 +1,21 @@
+version: 1.0
+
+improvements:
+
+  identify_recurring_problems: true
+
+  identify_success_patterns: true
+
+  recommend_process_changes: true
+
+  recommend_knowledge_updates: true
+
+  recommend_playbook_updates: true
+
+  require_founder_approval_for_major_changes: true
+
+thresholds:
+
+  recurring_issue_count: 3
+
+  recurring_success_count: 5

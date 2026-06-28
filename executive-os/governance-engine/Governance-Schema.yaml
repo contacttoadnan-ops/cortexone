@@ -1,0 +1,29 @@
+version: 1.0
+
+governance:
+
+  id:
+
+  executive:
+
+  decision:
+
+  authority_check:
+
+  policy_check:
+
+  constitution_check:
+
+  compliance_check:
+
+  violations:
+
+  recommendations:
+
+  escalation:
+
+  approval_status:
+
+  reviewer:
+
+  timestamp:

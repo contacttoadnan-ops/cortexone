@@ -1,0 +1,33 @@
+version: 1.0
+
+categories:
+
+  operations:
+
+  engineering:
+
+  finance:
+
+  marketing:
+
+  sales:
+
+  customer_success:
+
+  security:
+
+  product:
+
+  leadership:
+
+  communication:
+
+status:
+
+  proposed:
+
+  validated:
+
+  approved:
+
+  archived:

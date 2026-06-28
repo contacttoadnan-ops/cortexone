@@ -1,0 +1,43 @@
+engine:
+
+  name: Identity Engine
+
+  id: identity-engine
+
+  description: Establishes executive identity before all other engines.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+loads:
+
+  first
+
+depends_on:
+
+  []
+
+provides:
+
+  - Executive Identity
+
+  - Authority
+
+  - Reporting Structure
+
+  - Organization
+
+  - KPIs
+
+  - Company Values
+
+next_engine:
+
+  knowledge-engine

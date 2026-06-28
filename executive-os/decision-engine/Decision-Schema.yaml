@@ -1,0 +1,33 @@
+version: 1.0
+
+decision:
+
+  id:
+
+  executive:
+
+  request:
+
+  objective:
+
+  recommendation:
+
+  rationale:
+
+  supporting_evidence:
+
+  alternatives:
+
+  risks:
+
+  opportunities:
+
+  confidence:
+
+  authority:
+
+  requires_founder_approval:
+
+  escalation:
+
+  generated_at:

@@ -1,0 +1,35 @@
+engine:
+
+  name: Knowledge Engine
+
+  id: knowledge-engine
+
+  description: Organizes and delivers company knowledge.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+depends_on:
+
+  - identity-engine
+
+provides:
+
+  - Knowledge Index
+
+  - Knowledge Package
+
+  - Source Validation
+
+  - Knowledge Metadata
+
+next_engine:
+
+  context-engine

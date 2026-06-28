@@ -1,0 +1,53 @@
+version: 1.0
+
+audiences:
+
+  founder:
+
+    report_types:
+
+      - founder_brief
+
+      - strategic_report
+
+      - executive_summary
+
+  coo:
+
+    report_types:
+
+      - operational_report
+
+      - executive_summary
+
+  cto:
+
+    report_types:
+
+      - engineering_report
+
+      - incident_report
+
+  cmo:
+
+    report_types:
+
+      - marketing_report
+
+  cfo:
+
+    report_types:
+
+      - financial_report
+
+  chro:
+
+    report_types:
+
+      - people_report
+
+  cro:
+
+    report_types:
+
+      - customer_report

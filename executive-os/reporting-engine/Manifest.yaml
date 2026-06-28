@@ -1,0 +1,39 @@
+engine:
+
+  name: Reporting Engine
+
+  id: reporting-engine
+
+  description: Generates executive reports and communications.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+depends_on:
+
+  - decision-engine
+
+  - governance-engine
+
+  - collaboration-engine
+
+provides:
+
+  - Executive Reports
+
+  - Founder Briefs
+
+  - Operational Reports
+
+  - Risk Reports
+
+next_engine:
+
+  learning-engine

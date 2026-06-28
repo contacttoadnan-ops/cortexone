@@ -1,0 +1,36 @@
+engine:
+
+  name: Learning Engine
+
+  id: learning-engine
+
+  description: Captures lessons learned and continuously improves executive performance.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+depends_on:
+
+  - reporting-engine
+  - memory-engine
+
+provides:
+
+  - Lessons Learned
+
+  - Improvement Recommendations
+
+  - Knowledge Update Requests
+
+  - Learning Metrics
+
+next_engine:
+
+  orchestration-engine

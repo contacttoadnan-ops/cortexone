@@ -1,0 +1,33 @@
+version: 1.0
+
+memory:
+
+  id:
+
+  title:
+
+  category:
+
+  executive:
+
+  source:
+
+  owner:
+
+  importance:
+
+  confidence:
+
+  created_at:
+
+  updated_at:
+
+  expires_at:
+
+  tags:
+
+  summary:
+
+  content:
+
+  status:

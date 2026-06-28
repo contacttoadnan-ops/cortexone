@@ -1,0 +1,37 @@
+version: 1.0
+
+priority:
+
+  critical:
+
+    - Founder Request
+
+    - Critical Incident
+
+    - Security Event
+
+    - Customer Outage
+
+  high:
+
+    - Executive Report
+
+    - Product Metrics
+
+    - Open Risks
+
+    - Roadmap Changes
+
+  medium:
+
+    - Meetings
+
+    - Current Sprint
+
+    - Tasks
+
+  low:
+
+    - Historical Notes
+
+    - Informational Updates

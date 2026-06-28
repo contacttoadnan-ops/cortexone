@@ -1,0 +1,27 @@
+version: 1.0
+
+sources:
+
+  governance:
+    path: governance/
+
+  executive_handbooks:
+    path: executives/
+
+  product_documentation:
+    path: docs/
+
+  architecture:
+    path: architecture/
+
+  workflows:
+    path: workflows/
+
+  prompts:
+    path: prompts/
+
+  reports:
+    path: reports/
+
+  standards:
+    path: standards/

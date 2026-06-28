@@ -1,0 +1,33 @@
+version: 1.0
+
+confidence:
+
+  95-100:
+
+    label: Very High
+
+  80-94:
+
+    label: High
+
+  60-79:
+
+    label: Medium
+
+  40-59:
+
+    label: Low
+
+  0-39:
+
+    label: Insufficient
+
+rules:
+
+  below_60:
+
+    escalate: true
+
+  below_40:
+
+    decision_allowed: false

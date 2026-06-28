@@ -1,0 +1,27 @@
+version: 1.0
+
+learning:
+
+  id:
+
+  executive:
+
+  execution_id:
+
+  lesson:
+
+  category:
+
+  source:
+
+  outcome:
+
+  recommendation:
+
+  confidence:
+
+  approved_by:
+
+  created_at:
+
+  status:

@@ -1,0 +1,30 @@
+version: 1.0
+
+routing:
+
+  founder_request:
+
+    next: coo
+
+  coo_request:
+
+    next:
+
+      - cto
+      - cfo
+      - cmo
+      - chro
+      - cro
+      - research
+
+  executive_response:
+
+    next: reporting_engine
+
+  governance_failure:
+
+    next: founder
+
+  workflow_complete:
+
+    next: archive

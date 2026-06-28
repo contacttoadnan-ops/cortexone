@@ -1,0 +1,128 @@
+version: 1.0
+
+governance_checklist:
+
+  pre_execution:
+
+    identity_verified:
+      required: true
+      status:
+
+    authority_verified:
+      required: true
+      status:
+
+    responsibilities_verified:
+      required: true
+      status:
+
+    operating_boundaries_verified:
+      required: true
+      status:
+
+  evidence_validation:
+
+    evidence_available:
+      required: true
+      status:
+
+    evidence_trusted:
+      required: true
+      status:
+
+    evidence_complete:
+      required: true
+      status:
+
+    evidence_traceable:
+      required: true
+      status:
+
+  policy_validation:
+
+    executive_constitution_checked:
+      required: true
+      status:
+
+    company_policies_checked:
+      required: true
+      status:
+
+    executive_handbook_checked:
+      required: true
+      status:
+
+    compliance_rules_checked:
+      required: true
+      status:
+
+  decision_validation:
+
+    authority_within_scope:
+      required: true
+      status:
+
+    confidence_score_valid:
+      minimum: 60
+      status:
+
+    risks_identified:
+      required: true
+      status:
+
+    alternatives_considered:
+      required: true
+      status:
+
+    recommendation_supported:
+      required: true
+      status:
+
+  collaboration_validation:
+
+    stakeholder_notification_required:
+      status:
+
+    executive_consultation_required:
+      status:
+
+    founder_approval_required:
+      status:
+
+    escalation_required:
+      status:
+
+  audit_validation:
+
+    audit_record_created:
+      required: true
+      status:
+
+    decision_timestamp_recorded:
+      required: true
+      status:
+
+    decision_owner_recorded:
+      required: true
+      status:
+
+    evidence_recorded:
+      required: true
+      status:
+
+  final_approval:
+
+    governance_passed:
+      status:
+
+    execution_authorized:
+      status:
+
+    execution_blocked:
+      status:
+
+    reason:
+
+    approved_by:
+
+    approved_at:

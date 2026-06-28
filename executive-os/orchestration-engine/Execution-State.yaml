@@ -1,0 +1,47 @@
+version: 1.0
+
+states:
+
+  pending:
+
+  initialized:
+
+  running:
+
+  waiting:
+
+  delegated:
+
+  completed:
+
+  cancelled:
+
+  failed:
+
+  escalated:
+
+transitions:
+
+  pending:
+
+    - initialized
+
+  initialized:
+
+    - running
+
+  running:
+
+    - waiting
+    - delegated
+    - completed
+    - failed
+
+  failed:
+
+    - retry
+    - escalated
+
+  completed:
+
+    - archive

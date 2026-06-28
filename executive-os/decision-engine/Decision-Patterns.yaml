@@ -1,0 +1,219 @@
+version: 1.0
+
+patterns:
+
+  product_launch:
+
+    objective: Determine product launch readiness
+
+    evaluate:
+
+      - Product Quality
+      - Security
+      - Customer Impact
+      - Documentation
+      - Support Readiness
+      - Revenue Opportunity
+
+    required_evidence:
+
+      - QA Report
+      - CTO Assessment
+      - COO Assessment
+
+    escalation:
+
+      - Founder
+
+  hiring:
+
+    objective: Evaluate hiring request
+
+    evaluate:
+
+      - Business Need
+      - Budget
+      - Workload
+      - ROI
+      - Organizational Impact
+
+    required_evidence:
+
+      - Department Request
+      - CFO Review
+      - CHRO Review
+
+    escalation:
+
+      - Founder
+
+  security_incident:
+
+    objective: Assess security event
+
+    evaluate:
+
+      - Severity
+      - Customer Impact
+      - Legal Impact
+      - Financial Risk
+      - Recovery Time
+
+    required_evidence:
+
+      - CTO Report
+      - Security Report
+
+    escalation:
+
+      - Founder
+
+  customer_escalation:
+
+    objective: Resolve customer issue
+
+    evaluate:
+
+      - Customer Impact
+      - Revenue Impact
+      - SLA
+      - Technical Cause
+      - Reputation Risk
+
+    required_evidence:
+
+      - Customer Success Report
+      - CTO Report
+      - COO Report
+
+    escalation:
+
+      - COO
+
+  feature_prioritization:
+
+    objective: Prioritize product development
+
+    evaluate:
+
+      - Customer Demand
+      - Revenue Potential
+      - Strategic Alignment
+      - Engineering Effort
+      - Technical Risk
+
+    required_evidence:
+
+      - Product Roadmap
+      - CTO Recommendation
+      - COO Recommendation
+
+    escalation:
+
+      - Founder
+
+  pricing_change:
+
+    objective: Evaluate pricing modification
+
+    evaluate:
+
+      - Revenue Impact
+      - Market Position
+      - Customer Impact
+      - Competition
+      - Profitability
+
+    required_evidence:
+
+      - CFO Analysis
+      - CMO Analysis
+      - COO Analysis
+
+    escalation:
+
+      - Founder
+
+  partnership:
+
+    objective: Evaluate strategic partnership
+
+    evaluate:
+
+      - Strategic Fit
+      - Revenue Potential
+      - Technical Compatibility
+      - Operational Complexity
+      - Legal Risk
+
+    required_evidence:
+
+      - COO Assessment
+      - CTO Assessment
+      - CFO Assessment
+
+    escalation:
+
+      - Founder
+
+  vendor_selection:
+
+    objective: Select external vendor
+
+    evaluate:
+
+      - Cost
+      - Reliability
+      - Security
+      - Integration
+      - Support
+
+    required_evidence:
+
+      - Technical Evaluation
+      - Financial Evaluation
+
+    escalation:
+
+      - COO
+
+  budget_approval:
+
+    objective: Review budget request
+
+    evaluate:
+
+      - ROI
+      - Cash Flow
+      - Strategic Value
+      - Operational Need
+
+    required_evidence:
+
+      - CFO Analysis
+      - Department Request
+
+    escalation:
+
+      - Founder
+
+  strategic_decision:
+
+    objective: Evaluate company strategy
+
+    evaluate:
+
+      - Vision Alignment
+      - Market Opportunity
+      - Risk
+      - Resources
+      - Long-term Value
+
+    required_evidence:
+
+      - Executive Reviews
+      - Founder Objectives
+
+    escalation:
+
+      - Founder

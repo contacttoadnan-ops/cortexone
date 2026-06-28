@@ -1,0 +1,25 @@
+version: 1.0
+
+request:
+
+  id:
+
+  requester:
+
+  recipient:
+
+  objective:
+
+  context:
+
+  required_output:
+
+  deadline:
+
+  priority:
+
+  supporting_documents:
+
+  status:
+
+  created_at:

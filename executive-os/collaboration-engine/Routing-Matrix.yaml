@@ -1,0 +1,68 @@
+version: 1.0
+
+routes:
+
+  founder:
+
+    communicates_with:
+
+      - COO
+
+  COO:
+
+    communicates_with:
+
+      - CTO
+      - CFO
+      - CMO
+      - CHRO
+      - CRO
+      - Research
+
+  CTO:
+
+    communicates_with:
+
+      - Engineering
+      - QA
+      - DevOps
+      - COO
+
+  CFO:
+
+    communicates_with:
+
+      - Finance
+      - Legal
+      - COO
+
+  CMO:
+
+    communicates_with:
+
+      - Marketing
+      - Sales
+      - COO
+
+  CHRO:
+
+    communicates_with:
+
+      - HR
+      - COO
+
+  CRO:
+
+    communicates_with:
+
+      - Customer Success
+      - Sales
+      - COO
+
+  Research:
+
+    communicates_with:
+
+      - COO
+      - CTO
+      - CMO

@@ -1,0 +1,35 @@
+version: 1.0
+
+retention:
+
+  permanent:
+
+    - Founder Preferences
+
+    - Company Vision
+
+    - Executive Constitution
+
+    - Strategic Decisions
+
+  long_term:
+
+    - Lessons Learned
+
+    - Customer Knowledge
+
+    - Executive Decisions
+
+  medium_term:
+
+    - Project History
+
+    - Quarterly Reviews
+
+  temporary:
+
+    - Meeting Notes
+
+    - Daily Updates
+
+    - Execution Logs

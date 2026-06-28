@@ -1,0 +1,35 @@
+version: 1.0
+
+context:
+
+  id:
+
+  executive:
+
+  generated_at:
+
+  execution_id:
+
+  sources:
+
+  founder_requests:
+
+  current_objectives:
+
+  company_status:
+
+  executive_updates:
+
+  risks:
+
+  opportunities:
+
+  blockers:
+
+  metrics:
+
+  meetings:
+
+  tasks:
+
+  notes:

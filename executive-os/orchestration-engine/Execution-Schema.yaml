@@ -1,0 +1,27 @@
+version: 1.0
+
+execution:
+
+  id:
+
+  workflow:
+
+  requester:
+
+  owner:
+
+  status:
+
+  current_step:
+
+  next_step:
+
+  dependencies:
+
+  started_at:
+
+  completed_at:
+
+  execution_time:
+
+  result:

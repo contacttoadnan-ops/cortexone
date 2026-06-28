@@ -1,0 +1,31 @@
+version: 1.0
+
+knowledge:
+
+  id:
+
+  title:
+
+  category:
+
+  source:
+
+  owner:
+
+  version:
+
+  status:
+
+  confidentiality:
+
+  last_updated:
+
+  priority:
+
+  tags:
+
+  executive_access:
+
+  summary:
+
+  file:

@@ -1,0 +1,35 @@
+version: 1.0
+
+escalation:
+
+  authority_exceeded:
+
+    action: Founder
+
+  insufficient_information:
+
+    action: Request Additional Context
+
+  conflicting_evidence:
+
+    action: Founder Review
+
+  legal_risk:
+
+    action: Founder
+
+  financial_risk:
+
+    action: CFO
+
+  engineering_risk:
+
+    action: CTO
+
+  operational_risk:
+
+    action: COO
+
+  strategic_risk:
+
+    action: Founder

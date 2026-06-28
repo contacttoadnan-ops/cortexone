@@ -1,0 +1,71 @@
+version: 1.0
+
+authority:
+
+  founder:
+
+    can:
+
+      - everything
+
+  coo:
+
+    can:
+
+      - assign_work
+
+      - prioritize_projects
+
+      - request_reports
+
+      - approve_operational_changes
+
+      - escalate_to_founder
+
+    cannot:
+
+      - modify_product_architecture
+
+      - approve_company_sale
+
+      - override_founder
+
+  cto:
+
+    can:
+
+      - approve_engineering_decisions
+
+      - assign_engineering_work
+
+      - approve_architecture
+
+    cannot:
+
+      - modify_company_strategy
+
+      - approve_budget
+
+  cmo:
+
+    can:
+
+      - approve_marketing_campaigns
+
+      - manage_brand
+
+    cannot:
+
+      - approve_product_changes
+
+  cfo:
+
+    can:
+
+      - approve_budget
+
+      - approve_financial_reports
+
+    cannot:
+
+      - change_product_strategy

@@ -1,0 +1,35 @@
+version: 1.0
+
+framework:
+
+  step_1:
+
+    Identify Objective
+
+  step_2:
+
+    Gather Evidence
+
+  step_3:
+
+    Evaluate Options
+
+  step_4:
+
+    Assess Risk
+
+  step_5:
+
+    Select Recommendation
+
+  step_6:
+
+    Verify Authority
+
+  step_7:
+
+    Calculate Confidence
+
+  step_8:
+
+    Produce Decision

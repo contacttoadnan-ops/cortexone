@@ -1,0 +1,33 @@
+version: 1.0
+
+workflow:
+
+  lesson_identified:
+
+    next: validate
+
+  validate:
+
+    next: recommend
+
+  recommend:
+
+    next: founder_review
+
+  founder_review:
+
+    approved:
+
+      next: update_knowledge
+
+    rejected:
+
+      next: archive
+
+  update_knowledge:
+
+    next: notify_executives
+
+  notify_executives:
+
+    next: complete

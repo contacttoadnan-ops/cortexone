@@ -1,0 +1,23 @@
+version: 1.0
+
+response:
+
+  id:
+
+  request_id:
+
+  responder:
+
+  recommendation:
+
+  supporting_evidence:
+
+  confidence:
+
+  risks:
+
+  follow_up_required:
+
+  status:
+
+  completed_at:

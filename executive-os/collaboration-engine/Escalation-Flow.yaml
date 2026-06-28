@@ -1,0 +1,39 @@
+version: 1.0
+
+escalation:
+
+  no_response:
+
+    action: Escalate to Manager
+
+  insufficient_authority:
+
+    action: Escalate to COO
+
+  strategic_decision:
+
+    action: Escalate to Founder
+
+  conflicting_recommendations:
+
+    action: Executive Review
+
+  legal_issue:
+
+    action: CFO
+
+  financial_issue:
+
+    action: CFO
+
+  engineering_issue:
+
+    action: CTO
+
+  operational_issue:
+
+    action: COO
+
+  unresolved:
+
+    action: Founder

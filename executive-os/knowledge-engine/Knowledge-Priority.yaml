@@ -1,0 +1,35 @@
+version: 1.0
+
+priority:
+
+  critical:
+
+    - Executive Constitution
+
+    - Truth and Evidence Standard
+
+    - Founder Decisions
+
+  high:
+
+    - Product Bible
+
+    - Architecture
+
+    - Roadmap
+
+    - Executive Handbooks
+
+  normal:
+
+    - Reports
+
+    - Templates
+
+    - Playbooks
+
+  low:
+
+    - Historical Notes
+
+    - Archives

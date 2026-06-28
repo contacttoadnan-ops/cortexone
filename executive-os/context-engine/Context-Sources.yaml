@@ -1,0 +1,39 @@
+version: 1.0
+
+sources:
+
+  founder:
+
+    priority: critical
+
+  notion:
+
+    priority: high
+
+  github:
+
+    priority: high
+
+  executive_reports:
+
+    priority: high
+
+  cortexone_platform:
+
+    priority: high
+
+  meetings:
+
+    priority: medium
+
+  calendar:
+
+    priority: medium
+
+  metrics:
+
+    priority: medium
+
+  historical_context:
+
+    priority: low

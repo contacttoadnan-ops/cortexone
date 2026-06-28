@@ -1,0 +1,33 @@
+version: 1.0
+
+delivery:
+
+  founder:
+
+    priority: highest
+
+    format: executive_brief
+
+  executives:
+
+    priority: high
+
+    format: structured_report
+
+  departments:
+
+    priority: normal
+
+    format: operational_summary
+
+rules:
+
+  include_timestamp: true
+
+  include_confidence: true
+
+  include_recommendations: true
+
+  include_evidence: true
+
+  include_action_items: true

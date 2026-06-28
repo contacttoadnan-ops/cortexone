@@ -1,0 +1,219 @@
+version: 1.0
+
+organization:
+
+  company: CortexOne
+
+  founder:
+
+    id: founder
+
+    title: Founder & CEO
+
+    reports_to: null
+
+    manages:
+
+      - coo
+
+    authority: absolute
+
+    status: active
+
+  coo:
+
+    id: coo
+
+    title: Chief Operating Officer
+
+    reports_to: founder
+
+    manages:
+
+      - cto
+      - cfo
+      - cmo
+      - chro
+      - cro
+      - research
+
+    authority: executive
+
+    status: planned
+
+  cto:
+
+    id: cto
+
+    title: Chief Technology Officer
+
+    reports_to: coo
+
+    manages:
+
+      - engineering
+      - qa
+      - devops
+
+    authority: executive
+
+    status: planned
+
+  cfo:
+
+    id: cfo
+
+    title: Chief Financial Officer
+
+    reports_to: coo
+
+    manages:
+
+      - finance
+      - legal
+
+    authority: executive
+
+    status: planned
+
+  cmo:
+
+    id: cmo
+
+    title: Chief Marketing Officer
+
+    reports_to: coo
+
+    manages:
+
+      - marketing
+      - sales
+      - partnerships
+
+    authority: executive
+
+    status: planned
+
+  chro:
+
+    id: chro
+
+    title: Chief Human Resources Officer
+
+    reports_to: coo
+
+    manages:
+
+      - hr
+      - recruitment
+      - learning_development
+
+    authority: executive
+
+    status: planned
+
+  cro:
+
+    id: cro
+
+    title: Chief Revenue Officer
+
+    reports_to: coo
+
+    manages:
+
+      - customer_success
+      - account_management
+      - revenue_operations
+
+    authority: executive
+
+    status: planned
+
+  research:
+
+    id: research
+
+    title: Head of Research & Intelligence
+
+    reports_to: coo
+
+    manages:
+
+      - market_research
+      - competitive_intelligence
+      - innovation
+
+    authority: executive
+
+    status: planned
+
+departments:
+
+  engineering:
+
+    parent: cto
+
+  qa:
+
+    parent: cto
+
+  devops:
+
+    parent: cto
+
+  finance:
+
+    parent: cfo
+
+  legal:
+
+    parent: cfo
+
+  marketing:
+
+    parent: cmo
+
+  sales:
+
+    parent: cmo
+
+  partnerships:
+
+    parent: cmo
+
+  hr:
+
+    parent: chro
+
+  recruitment:
+
+    parent: chro
+
+  learning_development:
+
+    parent: chro
+
+  customer_success:
+
+    parent: cro
+
+  account_management:
+
+    parent: cro
+
+  revenue_operations:
+
+    parent: cro
+
+  market_research:
+
+    parent: research
+
+  competitive_intelligence:
+
+    parent: research
+
+  innovation:
+
+    parent: research

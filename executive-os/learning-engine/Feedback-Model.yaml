@@ -1,0 +1,31 @@
+version: 1.0
+
+feedback:
+
+  founder:
+
+    priority: highest
+
+  executive:
+
+    priority: high
+
+  customer:
+
+    priority: high
+
+  department:
+
+    priority: medium
+
+  automated_metrics:
+
+    priority: medium
+
+rules:
+
+  founder_feedback_overrides: true
+
+  conflicting_feedback_requires_review: true
+
+  anonymous_feedback_supported: true

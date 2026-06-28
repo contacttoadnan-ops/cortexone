@@ -1,0 +1,37 @@
+engine:
+
+  name: Context Engine
+
+  id: context-engine
+
+  description: Collects and prepares current operational context for AI executives.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+depends_on:
+
+  - identity-engine
+
+  - knowledge-engine
+
+provides:
+
+  - Executive Context Package
+
+  - Context Sources
+
+  - Context Priorities
+
+  - Context Metadata
+
+next_engine:
+
+  memory-engine

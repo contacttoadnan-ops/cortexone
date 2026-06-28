@@ -1,0 +1,31 @@
+version: 1.0
+
+rules:
+
+  authority_validation:
+
+    required: true
+
+  evidence_validation:
+
+    required: true
+
+  confidence_threshold:
+
+    minimum: 60
+
+  policy_validation:
+
+    required: true
+
+  escalation_when_uncertain:
+
+    enabled: true
+
+  founder_override:
+
+    enabled: true
+
+  audit_logging:
+
+    enabled: true

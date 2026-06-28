@@ -1,0 +1,35 @@
+version: 1.0
+
+hierarchy:
+
+  1:
+
+    Founder Directives
+
+  2:
+
+    Executive Constitution
+
+  3:
+
+    Company Policies
+
+  4:
+
+    Executive Handbook
+
+  5:
+
+    Department Procedures
+
+  6:
+
+    Operational Playbooks
+
+  7:
+
+    Standard Operating Procedures
+
+conflict_resolution:
+
+  higher_priority_policy_wins: true

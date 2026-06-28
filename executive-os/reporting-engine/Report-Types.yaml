@@ -1,0 +1,29 @@
+version: 1.0
+
+reports:
+
+  founder_brief:
+
+  executive_summary:
+
+  operational_report:
+
+  engineering_report:
+
+  marketing_report:
+
+  financial_report:
+
+  people_report:
+
+  customer_report:
+
+  incident_report:
+
+  strategic_report:
+
+  weekly_report:
+
+  monthly_report:
+
+  quarterly_report:

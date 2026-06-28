@@ -1,0 +1,27 @@
+version: 1.0
+
+message:
+
+  id:
+
+  conversation_id:
+
+  from:
+
+  to:
+
+  subject:
+
+  priority:
+
+  category:
+
+  content:
+
+  attachments:
+
+  references:
+
+  timestamp:
+
+  status:

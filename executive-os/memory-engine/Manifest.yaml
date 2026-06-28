@@ -1,0 +1,39 @@
+engine:
+
+  name: Memory Engine
+
+  id: memory-engine
+
+  description: Stores and retrieves persistent executive memory.
+
+  version: 1.0.0
+
+status:
+
+  production
+
+owner:
+
+  Founder
+
+depends_on:
+
+  - identity-engine
+
+  - knowledge-engine
+
+  - context-engine
+
+provides:
+
+  - Executive Memory
+
+  - Founder Preferences
+
+  - Historical Knowledge
+
+  - Lessons Learned
+
+next_engine:
+
+  decision-engine

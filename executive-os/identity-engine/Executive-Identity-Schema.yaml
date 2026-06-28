@@ -1,0 +1,31 @@
+version: 1.0
+
+executive:
+
+  id:
+  role:
+  title:
+
+  mission:
+
+  department:
+
+  reports_to:
+
+  manages:
+
+  responsibilities:
+
+  authority:
+
+  operating_boundaries:
+
+  decision_scope:
+
+  escalation_path:
+
+  kpis:
+
+  company:
+
+  executive_os_version:

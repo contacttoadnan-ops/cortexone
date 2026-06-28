@@ -1,0 +1,27 @@
+version: 1.0
+
+types:
+
+  founder_preferences:
+
+  executive_decisions:
+
+  customer_knowledge:
+
+  company_history:
+
+  operational_lessons:
+
+  technical_lessons:
+
+  marketing_lessons:
+
+  financial_lessons:
+
+  people_information:
+
+  strategic_direction:
+
+  recurring_problems:
+
+  recurring_successes:

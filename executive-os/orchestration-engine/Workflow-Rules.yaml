@@ -1,0 +1,35 @@
+version: 1.0
+
+workflow:
+
+  validate_request:
+
+  load_identity:
+
+  load_knowledge:
+
+  load_context:
+
+  load_memory:
+
+  decision:
+
+  governance:
+
+  collaboration:
+
+  reporting:
+
+  learning:
+
+  complete:
+
+rules:
+
+  retry_failed_steps: true
+
+  maximum_retries: 3
+
+  allow_parallel_execution: true
+
+  require_completion_confirmation: true
