@@ -1,14 +1,13 @@
 """
 CortexOne Executive Runtime
 
-This is the heart of CortexOne.
+Core runtime responsible for:
 
-Responsibilities:
-- Boot executives
-- Load Executive OS
-- Load executive packages
-- Build runtime context
-- Prepare prompts for AI models
+- Booting executives
+- Loading Executive OS
+- Loading Executive Packages
+- Building execution context
+- Building AI prompts
 """
 
 from rich.console import Console
@@ -19,6 +18,7 @@ from loader import (
 )
 
 from context_loader import build_context
+from context_assembler import ContextAssembler
 
 
 class ExecutiveRuntime:
@@ -35,15 +35,21 @@ class ExecutiveRuntime:
 
         self.context = None
 
-    # ----------------------------------------------------
+    # ======================================================
     # Boot Executive
-    # ----------------------------------------------------
+    # ======================================================
 
     def boot(self, executive: str):
 
         self.executive_name = executive.lower()
 
-        self.console.rule(f"[cyan]Booting {self.executive_name.upper()}[/cyan]")
+        self.console.rule(
+            f"[cyan]Booting {self.executive_name.upper()}[/cyan]"
+        )
+
+        #
+        # Executive OS
+        #
 
         self.console.print("Loading Executive OS...")
 
@@ -55,9 +61,17 @@ class ExecutiveRuntime:
 
         self.console.print()
 
-        self.console.print(f"Loading {self.executive_name.upper()} package...")
+        #
+        # Executive Package
+        #
 
-        self.executive_package = load_executive(self.executive_name)
+        self.console.print(
+            f"Loading {self.executive_name.upper()} package..."
+        )
+
+        self.executive_package = load_executive(
+            self.executive_name
+        )
 
         self.console.print(
             f"[green]✓[/green] {len(self.executive_package)} Executive documents loaded"
@@ -65,44 +79,53 @@ class ExecutiveRuntime:
 
         self.console.print()
 
-        self.console.print("Building runtime context...")
+        #
+        # Runtime Context
+        #
 
-        self.context = build_context(
-            self.executive_os,
-            self.executive_package,
+        self.console.print(
+            "Building runtime context..."
         )
 
-        self.console.print("[green]✓ Context Ready[/green]")
+        self.context = build_context(
+
+            self.executive_os,
+
+            self.executive_package
+
+        )
+
+        self.console.print(
+            "[green]✓ Context Ready[/green]"
+        )
 
         return self
 
-    # ----------------------------------------------------
+    # ======================================================
     # Ask Executive
-    # ----------------------------------------------------
+    # ======================================================
 
     def ask(self, founder_message: str):
 
-        from prompt_builder import PromptBuilder
+        assembler = ContextAssembler()
 
-        builder = PromptBuilder()
+        runtime_context = assembler.assemble(
 
-        builder.add_system(
-            "You are running inside CortexOne Executive Runtime."
+            executive_name=self.executive_name,
+
+            executive_os=self.executive_os,
+
+            executive_package=self.executive_package,
+
+            founder_request=founder_message
+
         )
 
-        builder.add_identity(self.executive_name)
+        return runtime_context["prompt"]
 
-        builder.add_context(self.context)
-
-        builder.add_founder_request(founder_message)
-
-        builder.add_timestamp()
-
-        return builder.build()
-
-    # ----------------------------------------------------
+    # ======================================================
     # Status
-    # ----------------------------------------------------
+    # ======================================================
 
     def status(self):
 
@@ -110,9 +133,13 @@ class ExecutiveRuntime:
 
             "executive": self.executive_name,
 
-            "executive_os_documents": len(self.executive_os),
+            "executive_os_documents": len(
+                self.executive_os
+            ),
 
-            "executive_documents": len(self.executive_package),
+            "executive_documents": len(
+                self.executive_package
+            ),
 
             "context_ready": self.context is not None
 
